@@ -1,14 +1,14 @@
-create table product (
+create table client (
 	id integer not null,
 	name varchar(50) not null,
-	quantity integer not null default 0,
-	constraint pk_product primary key (id)
+	name varchar(50) not null,
+	constraint pk_client primary key (id)
 );
 
-create sequence seq_product;
+create sequence seq_client;
 
-insert into product(id, name, quantity)
-values (nextval('seq_product'), 'Arroz', 10);
+insert into client(id, name, email)
+values (nextval('seq_client'), 'Carlos', 'carlos@email.com');
 
-select * from product;
+select * from client;
 
